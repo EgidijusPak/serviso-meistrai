@@ -59,7 +59,7 @@ export default function LikedWorkers() {
                 }
               : emp
           )
-          // If disliked, remove from list
+
           .filter((emp) => (hasLiked ? emp._id !== empId : true))
       );
       toast.success(
@@ -89,7 +89,7 @@ export default function LikedWorkers() {
               {emp.emp_fname} {emp.emp_lname}
             </h3>
             <p>{emp.emp_position}</p>
-            <p>Rating: ⭐ {emp.emp_rating}</p>
+            <p>Rating: {emp.emp_rating}</p>
           </div>
         );
       })}
